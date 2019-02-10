@@ -1,0 +1,10 @@
+;takes two args, returns true is two lists are equal otherwise nil (false)
+(DEFUN equal_lists (list1 list2)
+ (COND 
+    ((ATOM list1) (EQ list1 list2))
+    ((ATOM list2) NIL)
+    ((equal_lists (CAR list1) (CAR list2))
+        (equali_lists (CDR list1) (CDR list2))
+    (T NIL)
+  )
+) 
